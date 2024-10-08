@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: Newfont;
+    src: url(../font/Nunito-Regular.woff);
+    src: url(../font/Nunito-ExtraBold.woff);
+}
+body {
+    font-family: Newfont;
+}
+nav {
+    padding: 1rem;
+    background-color: gray;
+    position: sticky;
+    top: 0;
+}
+.container {
+    max-width: 1040px;
+    margin:0 auto;
+}
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo  a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.menu li {
+    margin: 0 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+.menu li::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    height: 1px;
+    background: rgb(255, 255, 255);
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 25px;
+    transition: .4s;
+}
+.menu li:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+/* .menu li :hover {
+    background: rgb(152, 143, 143);
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    transition: 0.2s;
+} */
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: rgb(197, 190, 190);
+}
+.hero-con {
+    display: flex;
+}
+.hero-info {
+    width: 100%;
+    padding: 1rem;
+}
+.hero-info h3 {
+    font-size: 4rem;
+}
+.hero-info p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.hero-info .hero-btn {
+    margin: 0.5rem 0;
+    display: inline-block;
+    background-color: green;
+    color: white;
+    padding: .3rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.hero-img img {
+    width: 100%;
+    padding: 3.5rem;
+}
+
+.blog-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+}
+.blog-title {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+.blog-item h4 {
+    font-size: 1.3rem;
+    margin: 0.5rem ;
+    text-align: center;
+}
+.blog-item p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.blog-item a {
+    display: inline-block;
+    color: white;
+    background-color: green;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.blog-item img {
+    width: 100%;
+}
+
+@media screen and (max-width: 580px) {
+
+    .logo {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    .nav-con {
+        padding: 1rem 0;
+        flex-direction: column;
+        height: auto;
+    }
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu li {
+        width: 100%;
+        padding: 1rem 0;
+        transition: 0.5s;
+    }
+    .menu li:hover {
+        background: rgb(140, 132, 132);
+    }
+} 
